@@ -1,0 +1,68 @@
+html {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "asd", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.site-container {
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1480px;
+}
+
+.title {
+  position: relative;
+  font: 500 3rem "Ubuntu";
+  color: #787878;
+  text-align: center;
+}
+
+.title::after {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -13px;
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: #4a4a4a;
+}

@@ -1,0 +1,66 @@
+.about-us {
+	display: flex;
+	padding: 143px 0 135px;
+}
+
+.about-us__main-title {
+  font: 700 6rem "Ubuntu";
+  text-transform: uppercase;
+	color: #303030;
+	text-align: center;
+}
+
+.about-us__title {
+	margin-bottom: 120px;
+}
+
+.about-us__features-list {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 135px;
+}
+
+.about-us__feature {
+	width: 30%;
+}
+
+.about-us__feature-title {
+	position: relative;
+	padding-top: 270px;
+	font: 700 4.5rem "Ubuntu";
+	color: #787878;
+	text-align: center;
+	margin-bottom: 70px;
+}
+
+.about-us__feature-description {
+	font: 400 2.1rem "UniNeue";
+	line-height: 1.5;
+	color: #5f5f5f;
+}
+
+.about-us__link {
+	padding: 22px 0;
+	text-align: center;
+	display: block;
+	width: 29.2rem;
+	font: 900 2.3rem "UniNeue";
+	line-height: 1;
+	text-transform: uppercase;
+	color: #fff;
+	background: linear-gradient(#5f407b, #4a50a8);
+	border-radius: 36px;
+	margin: 0 auto;
+}
+
+.about-us__feature-title-1 {
+	background: url("../img/about-us-1.svg") center top/146px no-repeat;
+}
+
+.about-us__feature-title-2 {
+	background: url("../img/about-us-2.svg") center top/206px no-repeat;
+}
+
+.about-us__feature-title-3 {
+	background: url("../img/about-us-3.svg") center top/160px no-repeat;
+}

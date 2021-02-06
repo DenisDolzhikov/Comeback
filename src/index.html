@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Comeback</title>
+	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	@include('html/components/burger.html')
+	
+	<div class="site-container">
+		@include('html/components/sticky-nav.html')
+		@include('html/sections/header.html')
+		<main class="main-content" style="height: 3000px;">
+			@include('html/sections/about-us.html')
+			@include('html/sections/works.html')
+		</main>
+	</div>
+
+	<div class="preloader">
+		<div class="sk-fading-circle">
+			<div class="sk-circle sk-circle-1"></div>
+			<div class="sk-circle sk-circle-2"></div>
+			<div class="sk-circle sk-circle-3"></div>
+			<div class="sk-circle sk-circle-4"></div>
+			<div class="sk-circle sk-circle-5"></div>
+			<div class="sk-circle sk-circle-6"></div>
+			<div class="sk-circle sk-circle-7"></div>
+			<div class="sk-circle sk-circle-8"></div>
+			<div class="sk-circle sk-circle-9"></div>
+			<div class="sk-circle sk-circle-10"></div>
+			<div class="sk-circle sk-circle-11"></div>
+			<div class="sk-circle sk-circle-12"></div>
+		</div>
+	</div>
+	
+	<script src="js/main.js"></script>
+</body>
+</html>
+
+

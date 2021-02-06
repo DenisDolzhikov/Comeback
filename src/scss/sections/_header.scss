@@ -1,0 +1,23 @@
+@import "../components/mouse-icon";
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background: url("../../img/header-bg.png") 0 0/cover no-repeat;
+	// background-position: 0 0;
+	// background-size: 100%;
+	// background-repeat: no-repeat;
+}
+
+.header__title {
+  font: 700 6.7rem "Ubuntu";
+	color: #fff;
+}
+
+.header__description {
+  font: 300 4rem "Ubuntu";
+	color: #fff;
+	text-align: center;
+}
