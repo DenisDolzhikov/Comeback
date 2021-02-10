@@ -21,6 +21,9 @@ const rev = require('gulp-rev');
 const revRewrite = require('gulp-rev-rewrite');
 const revdel = require('gulp-rev-delete-original');
 const htmlmin = require('gulp-htmlmin');
+const imagemin = require('gulp-imagemin');
+const webp = require('imagemin-webp');
+const extReplace = require('gulp-ext-replace');
 
 // DEV
 //svg sprite
@@ -43,6 +46,17 @@ const resources = () => {
 
 const imgToApp = () => {
 	return src(['./src/img/**/*', "!src/img/svg/*", "!src/img/svg"], {base: "src"})
+    .pipe(dest('./app/'))
+}
+
+const exportWebP = () => {
+  return src(['./src/img/**/*.jpg', './src/img/**/*.png'], {base: 'src'})
+    .pipe(imagemin([
+      webp({
+        quality: 60,
+      })
+    ]))
+    .pipe(extReplace('.webp'))
     .pipe(dest('./app/'))
 }
 
@@ -201,6 +215,7 @@ const watchFiles = () => {
   watch('./src/resources/**', resources);
   watch(['./src/img/svg/*.svg', './src/img/svg'], svgSprites);
   watch(['./src/img/**/*', '!src/img/svg/*', '!src/img/svg'], imgToApp);
+  watch(['./src/img/**/*.jpg', './src/img/**/*.png'], exportWebP);
   watch('./src/fonts/**', fonts);
   watch('./src/fonts/**', fontsStyle);
 }
@@ -216,7 +231,7 @@ exports.watchFiles = watchFiles;
 exports.fonts = fonts;
 exports.fontsStyle = fontsStyle;
 
-exports.default = series(clean, parallel(htmlInclude, scripts, fonts, resources, imgToApp, svgSprites), fontsStyle, styles, watchFiles);
+exports.default = series(clean, parallel(htmlInclude, scripts, fonts, resources, imgToApp, exportWebP, svgSprites), fontsStyle, styles, watchFiles);
 
 // BUILD
 const tinypng = () => {
@@ -308,7 +323,7 @@ const htmlMinify = () => {
 
 exports.cache = series(cache, rewrite);
 
-exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, resources, imgToApp, svgSprites), fontsStyle, stylesBuild, htmlMinify, tinypng);
+exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, resources, imgToApp, exportWebP, svgSprites), fontsStyle, stylesBuild, htmlMinify, tinypng);
 
 
 // deploy
