@@ -37,6 +37,7 @@
     "gulp-util": "^3.0.8",
     "imagemin": "^7.0.1",
     "imagemin-webp": "^6.0.0",
+    "lozad": "^1.16.0",
     "stylelint": "^13.9.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
     "stylelint-order": "^4.1.0",
@@ -45,5 +46,7 @@
     "webpack": "^4.43.0",
     "webpack-stream": "^5.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "swiper": "^6.4.11"
+  }
 }
